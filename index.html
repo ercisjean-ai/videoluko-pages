@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VideoLuko</title>
+  <meta name="description" content="VideoLuko public pages for TikTok Developer setup.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0a0d12;
+      --bg-soft: #11161d;
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #f3f6fb;
+      --muted: #a4afbf;
+      --accent: #ff4f6d;
+      --accent-alt: #5bc0ff;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background:
+        radial-gradient(circle at top left, rgba(255, 79, 109, 0.18), transparent 34%),
+        radial-gradient(circle at right 20%, rgba(91, 192, 255, 0.14), transparent 28%),
+        var(--bg);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: transparent;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 24px 0 48px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 8px 0 24px;
+    }
+
+    .brand {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--text);
+    }
+
+    .hero {
+      padding: 64px 0 28px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      letter-spacing: 0.04em;
+    }
+
+    h1 {
+      max-width: 10ch;
+      margin: 20px 0 16px;
+      font-size: clamp(2.9rem, 9vw, 5.6rem);
+      line-height: 0.94;
+      letter-spacing: -0.05em;
+    }
+
+    .lead {
+      max-width: 620px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      padding: 13px 18px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: linear-gradient(135deg, var(--accent), #ff7d45);
+      color: #ffffff;
+      box-shadow: var(--shadow);
+    }
+
+    .button-secondary {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--text);
+    }
+
+    .summary {
+      margin-top: 56px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      backdrop-filter: blur(8px);
+    }
+
+    .summary p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer {
+      margin-top: 48px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 40px;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .summary {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="nav">
+      <a class="brand" href="index.html">VideoLuko</a>
+      <nav class="nav-links" aria-label="Public pages">
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <span class="eyebrow">Public information</span>
+        <h1>VideoLuko</h1>
+        <p class="lead">
+          VideoLuko is a lightweight publishing tool designed to help creators and teams manage video posting workflows.
+          This small public site provides the legal pages required for TikTok Developer configuration.
+        </p>
+        <div class="actions">
+          <a class="button button-primary" href="terms.html">View Terms</a>
+          <a class="button button-secondary" href="privacy.html">View Privacy</a>
+        </div>
+      </section>
+
+      <section class="summary" aria-labelledby="about-title">
+        <h2 id="about-title">About this site</h2>
+        <p>
+          These pages are intended to present VideoLuko in a clear and minimal way while the product is being configured and connected to external publishing platforms.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      VideoLuko public pages for TikTok Developer setup.
+    </footer>
+  </div>
+</body>
+</html>
